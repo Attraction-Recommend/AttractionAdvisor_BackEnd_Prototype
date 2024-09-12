@@ -9,4 +9,5 @@ public interface AttractionRepository extends JpaRepository<Attraction, Long> {
 
     List<Attraction> findByPoiId(String poiId);
 
+
 }
