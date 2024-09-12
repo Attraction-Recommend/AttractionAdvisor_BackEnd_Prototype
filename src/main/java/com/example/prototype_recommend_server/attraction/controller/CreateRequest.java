@@ -1,4 +1,4 @@
-package com.example.prototype_recommend_server.controller;
+package com.example.prototype_recommend_server.attraction.controller;
 
 import jakarta.persistence.Column;
 import lombok.Data;

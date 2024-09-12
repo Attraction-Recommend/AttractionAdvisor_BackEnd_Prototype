@@ -1,8 +1,8 @@
-package com.example.prototype_recommend_server.dto;
+package com.example.prototype_recommend_server.user.dto;
 
 
-import com.example.prototype_recommend_server.domain.user.User;
-import com.example.prototype_recommend_server.domain.user.UserPreference;
+import com.example.prototype_recommend_server.user.entity.User;
+import com.example.prototype_recommend_server.user.entity.UserPreference;
 import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.Data;

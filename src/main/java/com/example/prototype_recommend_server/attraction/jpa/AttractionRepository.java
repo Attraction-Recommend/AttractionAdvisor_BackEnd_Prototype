@@ -1,6 +1,6 @@
-package com.example.prototype_recommend_server.jpa;
+package com.example.prototype_recommend_server.attraction.jpa;
 
-import com.example.prototype_recommend_server.domain.attraction.Attraction;
+import com.example.prototype_recommend_server.attraction.entity.Attraction;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 

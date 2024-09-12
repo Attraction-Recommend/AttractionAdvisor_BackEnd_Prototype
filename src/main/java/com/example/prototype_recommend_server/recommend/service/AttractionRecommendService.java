@@ -1,6 +1,6 @@
-package com.example.prototype_recommend_server.service;
+package com.example.prototype_recommend_server.recommend.service;
 
-import com.example.prototype_recommend_server.jpa.AttractionRepository;
+import com.example.prototype_recommend_server.attraction.jpa.AttractionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

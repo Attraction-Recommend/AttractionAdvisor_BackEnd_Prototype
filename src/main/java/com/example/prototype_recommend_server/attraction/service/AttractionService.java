@@ -1,8 +1,8 @@
-package com.example.prototype_recommend_server.service;
+package com.example.prototype_recommend_server.attraction.service;
 
 
-import com.example.prototype_recommend_server.domain.attraction.Attraction;
-import com.example.prototype_recommend_server.jpa.AttractionRepository;
+import com.example.prototype_recommend_server.attraction.jpa.AttractionRepository;
+import com.example.prototype_recommend_server.attraction.entity.Attraction;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

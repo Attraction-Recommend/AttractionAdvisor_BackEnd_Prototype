@@ -1,4 +1,4 @@
-package com.example.prototype_recommend_server.controller;
+package com.example.prototype_recommend_server.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;

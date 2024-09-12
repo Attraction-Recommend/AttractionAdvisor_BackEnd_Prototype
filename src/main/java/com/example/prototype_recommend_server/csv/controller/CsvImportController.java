@@ -1,7 +1,7 @@
-package com.example.prototype_recommend_server.controller;
+package com.example.prototype_recommend_server.csv.controller;
 
-import com.example.prototype_recommend_server.domain.attraction.Attraction;
-import com.example.prototype_recommend_server.service.CsvImportService;
+import com.example.prototype_recommend_server.attraction.entity.Attraction;
+import com.example.prototype_recommend_server.csv.service.CsvImportService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.example.prototype_recommend_server.controller;
+package com.example.prototype_recommend_server.recommend;
 
 import java.util.List;
 import lombok.RequiredArgsConstructor;

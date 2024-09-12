@@ -1,6 +1,6 @@
-package com.example.prototype_recommend_server.jpa;
+package com.example.prototype_recommend_server.user.jpa;
 
-import com.example.prototype_recommend_server.domain.user.User;
+import com.example.prototype_recommend_server.user.entity.User;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 

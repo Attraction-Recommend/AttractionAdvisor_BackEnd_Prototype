@@ -1,4 +1,4 @@
-package com.example.prototype_recommend_server.domain.attraction;
+package com.example.prototype_recommend_server.user.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,19 +13,19 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "attraction_features")
-public class AttractionFeature {
+@Table(name = "user_preferences")
+public class UserPreference {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "attraction_id", nullable = false)
-    private Attraction attraction;
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Column(nullable = false)
-    private String featureName;
+    private String category;
 
     @Column(nullable = false)
-    private String featureValue;
+    private Integer preferenceLevel;
 }

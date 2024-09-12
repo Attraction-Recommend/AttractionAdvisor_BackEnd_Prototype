@@ -1,8 +1,8 @@
-package com.example.prototype_recommend_server.service;
+package com.example.prototype_recommend_server.csv.service;
 
 
-import com.example.prototype_recommend_server.domain.attraction.Attraction;
-import com.example.prototype_recommend_server.jpa.AttractionRepository;
+import com.example.prototype_recommend_server.attraction.entity.Attraction;
+import com.example.prototype_recommend_server.attraction.jpa.AttractionRepository;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;

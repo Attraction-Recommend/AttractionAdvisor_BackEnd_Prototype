@@ -1,4 +1,4 @@
-package com.example.prototype_recommend_server.domain.attraction;
+package com.example.prototype_recommend_server.attraction.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

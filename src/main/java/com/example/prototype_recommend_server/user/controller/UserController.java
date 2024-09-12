@@ -1,10 +1,10 @@
-package com.example.prototype_recommend_server.controller;
+package com.example.prototype_recommend_server.user.controller;
 
 
-import com.example.prototype_recommend_server.domain.user.User;
-import com.example.prototype_recommend_server.domain.user.UserPreference;
-import com.example.prototype_recommend_server.dto.UserDTO;
-import com.example.prototype_recommend_server.service.UserService;
+import com.example.prototype_recommend_server.user.entity.User;
+import com.example.prototype_recommend_server.user.entity.UserPreference;
+import com.example.prototype_recommend_server.user.dto.UserDTO;
+import com.example.prototype_recommend_server.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

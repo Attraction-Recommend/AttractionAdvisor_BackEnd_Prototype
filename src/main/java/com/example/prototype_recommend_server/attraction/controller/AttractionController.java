@@ -1,8 +1,8 @@
-package com.example.prototype_recommend_server.controller;
+package com.example.prototype_recommend_server.attraction.controller;
 
-import com.example.prototype_recommend_server.domain.attraction.Attraction;
-import com.example.prototype_recommend_server.dto.AttractionDTO;
-import com.example.prototype_recommend_server.service.AttractionService;
+import com.example.prototype_recommend_server.attraction.entity.Attraction;
+import com.example.prototype_recommend_server.attraction.dto.AttractionDTO;
+import com.example.prototype_recommend_server.attraction.service.AttractionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -44,36 +44,7 @@ public class AttractionController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error updating model: " + e.getMessage());
         }
     }
-//
-//    @GetMapping("/nearby")
-//    public ResponseEntity<List<AttractionDTO>> getNearbyAttractions(
-//            @RequestParam double latitude,
-//            @RequestParam double longitude,
-//            @RequestParam(defaultValue = "10000") double distance) {
-//        List<Attraction> attractions = attractionService.getNearbyAttractions(latitude, longitude, distance);
-//        List<AttractionDTO> attractionDTOs = attractions.stream()
-//                .map(AttractionDTO::fromAttraction)
-//                .collect(Collectors.toList());
-//        return ResponseEntity.ok(attractionDTOs);
-//    }
-//
-//    @GetMapping("/type/{visitAreaTypeCd}")
-//    public ResponseEntity<List<AttractionDTO>> getAttractionsByType(@PathVariable String visitAreaTypeCd) {
-//        List<Attraction> attractions = attractionService.getAttractionsByType(visitAreaTypeCd);
-//        List<AttractionDTO> attractionDTOs = attractions.stream()
-//                .map(AttractionDTO::fromAttraction)
-//                .collect(Collectors.toList());
-//        return ResponseEntity.ok(attractionDTOs);
-//    }
-//
-//    @GetMapping("/region/{sggCd}")
-//    public ResponseEntity<List<AttractionDTO>> getAttractionsByRegion(@PathVariable String sggCd) {
-//        List<Attraction> attractions = attractionService.getAttractionsByRegion(sggCd);
-//        List<AttractionDTO> attractionDTOs = attractions.stream()
-//                .map(AttractionDTO::fromAttraction)
-//                .collect(Collectors.toList());
-//        return ResponseEntity.ok(attractionDTOs);
-//    }
+
 
     @PostMapping
     public ResponseEntity<AttractionDTO> createAttraction(@RequestBody AttractionDTO attractionDTO) {

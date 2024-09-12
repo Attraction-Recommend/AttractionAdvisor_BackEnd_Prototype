@@ -1,8 +1,8 @@
-package com.example.prototype_recommend_server.service;
+package com.example.prototype_recommend_server.user;
 
-import com.example.prototype_recommend_server.domain.user.User;
-import com.example.prototype_recommend_server.domain.user.UserPreference;
-import com.example.prototype_recommend_server.jpa.UserRepository;
+import com.example.prototype_recommend_server.user.entity.User;
+import com.example.prototype_recommend_server.user.entity.UserPreference;
+import com.example.prototype_recommend_server.user.jpa.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

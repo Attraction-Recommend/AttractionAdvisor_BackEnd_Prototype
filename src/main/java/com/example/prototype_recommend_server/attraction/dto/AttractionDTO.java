@@ -1,6 +1,6 @@
-package com.example.prototype_recommend_server.dto;
+package com.example.prototype_recommend_server.attraction.dto;
 
-import com.example.prototype_recommend_server.domain.attraction.Attraction;
+import com.example.prototype_recommend_server.attraction.entity.Attraction;
 import java.time.LocalDateTime;
 import lombok.Data;
 

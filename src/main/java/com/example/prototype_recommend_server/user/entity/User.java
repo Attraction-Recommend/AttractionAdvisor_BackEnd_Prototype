@@ -1,4 +1,4 @@
-package com.example.prototype_recommend_server.domain.user;
+package com.example.prototype_recommend_server.user.entity;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
