@@ -16,7 +16,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-public class RecommendationController {
+public class GetRecommendationController {
     private final AttractionRecommendService recommendationService;
 
     @PostMapping("/recommend")

@@ -27,7 +27,7 @@ public class AttractionMapper {
         attraction.setPoiId(data[1]);
         attraction.setPoiNm(data[2]);
 
-        log.debug("Created Attraction: travelId={}, poiId={}, poiNm={}",
+        log.debug("Created AttractionRecommend: travelId={}, poiId={}, poiNm={}",
                 attraction.getTravelId(), attraction.getPoiId(), attraction.getPoiNm());
 
         return attraction;

@@ -1,11 +1,10 @@
 package com.example.prototype_recommend_server.attraction.controller;
 
-import com.example.prototype_recommend_server.attraction.entity.Attraction;
 import com.example.prototype_recommend_server.attraction.dto.AttractionDTO;
+import com.example.prototype_recommend_server.attraction.entity.Attraction;
 import com.example.prototype_recommend_server.attraction.service.AttractionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,16 +33,6 @@ public class AttractionController {
         return createId;
     }
 
-    @PostMapping("/updateModel")
-    public ResponseEntity<String> updateModel() {
-        try {
-            String result = attractionService.updateModel();
-            return ResponseEntity.ok(result);
-        } catch (Exception e) {
-            log.error("Error updating model", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error updating model: " + e.getMessage());
-        }
-    }
 
 
     @PostMapping
