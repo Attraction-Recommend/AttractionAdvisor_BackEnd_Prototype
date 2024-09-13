@@ -1,8 +1,8 @@
 package com.example.prototype_recommend_server.recommend.service;
 
+import com.example.prototype_recommend_server.attraction.entity.Attraction;
 import com.example.prototype_recommend_server.recommend.controller.requestDto.RecommendRequest;
 import com.example.prototype_recommend_server.recommend.controller.responseDto.RecommendResponse;
-import com.example.prototype_recommend_server.recommend.entity.AttractionRecommend;
 import com.example.prototype_recommend_server.recommend.jpa.AttractionRecommendRepository;
 import java.util.HashMap;
 import java.util.List;
@@ -45,11 +45,11 @@ public class UpdateAttractionAiService {
 
         @Transactional(readOnly = true)
         public Mono<String> updateModel() {
-            List<AttractionRecommend> attractions = attractionRecommendRepository.findAll();
+            List<Attraction> attractions = attractionRecommendRepository.findAll();
             Map<String, Object> requestBody = Map.of("attractions", mapAttractionsToDto(attractions));
 
             return webClient.post()
-                    .uri(pythonApiUrl + updateModelPath)
+                    .uri(updateModelPath)
                     .contentType(MediaType.APPLICATION_JSON)
                     .body(Mono.just(requestBody), Map.class)
                     .retrieve()
@@ -59,7 +59,7 @@ public class UpdateAttractionAiService {
                     .onErrorMap(this::handleApiError);
         }
 
-        private List<Map<String, Object>> mapAttractionsToDto(List<AttractionRecommend> attractions) {
+        private List<Map<String, Object>> mapAttractionsToDto(List<Attraction> attractions) {
             return attractions.stream()
                     .map(attraction -> {
                         Map<String, Object> map = new HashMap<>();

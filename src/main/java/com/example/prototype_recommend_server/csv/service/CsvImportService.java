@@ -1,9 +1,9 @@
 package com.example.prototype_recommend_server.csv.service;
 
 
+import com.example.prototype_recommend_server.attraction.entity.Attraction;
 import com.example.prototype_recommend_server.csv.domain.AttractionMapper;
 import com.example.prototype_recommend_server.csv.domain.CsvReader;
-import com.example.prototype_recommend_server.csv.entity.Attraction;
 import com.example.prototype_recommend_server.csv.jpa.AttractionCsvRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

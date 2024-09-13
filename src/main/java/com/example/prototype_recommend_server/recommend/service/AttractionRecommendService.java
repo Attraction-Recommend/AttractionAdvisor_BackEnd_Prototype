@@ -1,6 +1,5 @@
 package com.example.prototype_recommend_server.recommend.service;
 
-import com.example.prototype_recommend_server.attraction.jpa.AttractionRepository;
 import com.example.prototype_recommend_server.recommend.RecommendationException;
 import com.example.prototype_recommend_server.recommend.controller.requestDto.RecommendRequest;
 import com.example.prototype_recommend_server.recommend.controller.responseDto.RecommendResponse;
@@ -21,18 +20,19 @@ public class AttractionRecommendService {
     @Value("${python.api.url}")
     private String pythonApiUrl;
 
-    public Mono<RecommendResponse> getRecommendations(RecommendRequest request) {
+    public Mono<RecommendResponse> getRecommendations(String travelId) {
+        RecommendRequest request = new RecommendRequest(travelId);
+
         return webClient.post()
                 .uri(pythonApiUrl)
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(Mono.just(request), RecommendRequest.class)
+                .bodyValue(request)
                 .retrieve()
                 .bodyToMono(RecommendResponse.class)
                 .onErrorMap(this::handleApiError);
     }
 
     private Throwable handleApiError(Throwable error) {
-        // 여기서 특정 예외 유형에 따라 커스텀 예외로 변환할 수 있습니다.
         return new RecommendationException("Error fetching recommendations", error);
     }
 }

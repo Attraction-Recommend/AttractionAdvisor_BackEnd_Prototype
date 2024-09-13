@@ -21,7 +21,7 @@ public class GetRecommendationController {
 
     @PostMapping("/recommend")
     public Mono<ResponseEntity<RecommendResponse>> getRecommendations(@RequestBody RecommendRequest request) {
-        return recommendationService.getRecommendations(request)
+        return recommendationService.getRecommendations(request.getTravel_id())
                 .map(ResponseEntity::ok)
                 .onErrorResume(this::handleError);
     }

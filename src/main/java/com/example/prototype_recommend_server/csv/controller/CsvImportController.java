@@ -1,6 +1,6 @@
 package com.example.prototype_recommend_server.csv.controller;
 
-import com.example.prototype_recommend_server.csv.entity.Attraction;
+import com.example.prototype_recommend_server.attraction.entity.Attraction;
 import com.example.prototype_recommend_server.csv.service.CsvImportService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

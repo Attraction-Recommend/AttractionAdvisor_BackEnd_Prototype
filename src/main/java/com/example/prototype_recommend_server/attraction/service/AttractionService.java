@@ -27,7 +27,7 @@ public class AttractionService {
     @Transactional(readOnly = true)
     public Attraction getAttractionById(Long id) {
         return attractionRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("AttractionRecommend not found"));
+                .orElseThrow(() -> new RuntimeException("Attraction not found"));
     }
 
     @Transactional(readOnly = true)
